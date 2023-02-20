@@ -23,7 +23,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["pageScript/main.js","popup/dist/assets/production_main-36a48373.js","test.js"],
+      "resources": ["pageScript/main.js","chatgpttooltip-injected-by-alyosha1024.js","test.js"],
       "matches": ["<all_urls>"]
     }
   ],

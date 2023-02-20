@@ -1,11 +1,11 @@
 #container-chat-alyosha1024{
-  display:flex;
-  border: solid 2px yellow;
-  width:500px;
-  height:400px;
-  
+  visibility: hidden;
+  display: flex;
+  width:830px;
+  position: absolute;
 }
 #icon-chat-alyosha1024{
+  display: block;
   width:25px;
   height:25px;
   background-image: url("./icon/alyosha.png");
@@ -14,13 +14,25 @@
 
 #drawer-chat-alyosha1024{
   display: block;
+  box-sizing: border-box;
   width:500px;
-  // height:0px;
-  margin-left:20px; background-color:#a45d33;
-  border:solid 2px;
+  margin-left: 10px;
+  background-color:#a45d33;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
-  padding: 5px;
+  padding: 15px;
+  word-break:break-all;
+
+  .arco-input-group-addbefore{
+    background-color: #f9c89b
+  }
+  .arco-input-inner-wrapper{
+    background-color: #f9c89b
+  }
+  .arco-input-inner-wrapper-focus{
+    border: solid 1px #a45d33
+  }
+
 
 }
 
@@ -37,10 +49,11 @@
 .chatgpt-icon-chat-alyosha1024{
   height: 14px;
   width: 14px;
-  background-image: url("./icon/chatgpt.ico");
+  background-image: url("./icon/chatgpt.png");
   background-size: cover;
 }
 .chatgpt-text-chat-alyosha1024{
   font-size: 14px;
-  margin-left: 3px;
+  margin: 0 5px;
+
 }

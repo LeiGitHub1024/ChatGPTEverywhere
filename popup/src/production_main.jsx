@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-// import './index.css'
 
 console.log('123',document)
 const div = document.createElement('div'); 

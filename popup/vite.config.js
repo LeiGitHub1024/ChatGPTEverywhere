@@ -7,10 +7,19 @@ import babel from '@rollup/plugin-babel';
 export default defineConfig({
   plugins: [react()],
   build: {
+    target: 'es2015',
+    outDir: 'dist',
     rollupOptions: {
-      input: 'src/production_main.jsx'
-    }
-  }
+      input: 'src/production_main.jsx',
+      cssCodeSplit: false,
+      assetsDir: '',
+      output: {
+        format: 'iife',
+        entryFileNames: 'chatgpttooltip-injected-by-alyosha1024.js',
+        chunkFileNames: '[name].js'
+      },
+    },
+  },
   // build: {
   //   lib: {
   //     entry: 'src/chatGPT.js',

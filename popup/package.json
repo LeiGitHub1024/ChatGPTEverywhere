@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@arco-design/web-react": "^2.45.0",
     "@song940/chatgpt-api": "^0.0.2",
     "chatgpt": "^4.4.1",
     "less": "^4.1.3",
