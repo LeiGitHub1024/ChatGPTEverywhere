@@ -115,7 +115,7 @@ function App() {
                   <span>Q：</span> <span id='question-chat-alyosha1024'>{question}</span>
                 </div>
                 <div  style={{display:'flex'}}>
-                  <span>A： </span> <span id='answer-chat-alyosha1024'>{spin&&<Spin dot />}{answer}</span>
+                  <span>A： </span> <span id='answer-chat-alyosha1024'>{spin&&<Spin dot style={{marginTop:-10}} size={6}/>}{answer}</span>
                 </div>
             </div>
             }
