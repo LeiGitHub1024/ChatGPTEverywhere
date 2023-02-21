@@ -22,14 +22,6 @@ const init = async ()=>{
   document.documentElement.appendChild(script1);
   
 
-  chrome.storage.local.set({'setting':{
-    bans:['balabala'],
-    time:['0-24']
-  }},res=>{
-    // console.log('chrome.storage.local设置成功')
-  })
-  
-
 
   /** 接收pageScript传来的信息，转发给iframe */
   window.addEventListener("pageScript", function (inputObj) {
@@ -52,10 +44,6 @@ const init = async ()=>{
   chrome.runtime.sendMessage({ type: 'ajaxInterceptor', to: 'content_to_background', content:'小黑子' }).catch(err => {
     // console.log('err1: ', err);
   });
-
-
-
-
 
 
 }
