@@ -32,16 +32,21 @@ function App() {
       mypopComponet.style.top = event.pageY +20 +'px'
       mypopComponet.style.visibility = 'visible'
     });
-    const savedApiKey = window['chatgpt-apikey-alyosha1024']//加载用户保存的apiKey
+    var scriptTag = document.querySelector('#injected_chatgpt_util_by_alyosha1024');
+    // console.log('scriptTag',scriptTag)
+    var savedApiKey = scriptTag?.getAttribute('apikey');//加载用户保存的apiKey
+    // console.log('pagesrcipt加载到的key为：',savedApiKey)
     if(savedApiKey){
-      setApikey(saveApiKey)
+      setApikey(savedApiKey)
+    }else{
+      setSettingVisible(true)
     }
   }, [])
   function saveApiKey(){
-    console.log(apikey)
+    // console.log(apikey)
     window.dispatchEvent(
       new CustomEvent('pageScript', {
-        input1:apikey
+        detail: { apikey: apikey},
       }),
     );
     setSettingVisible(false)
@@ -52,14 +57,14 @@ function App() {
         successTip.style.display = 'none'
       }, 500);
     }
+    askChatGPTAndUpdateUI(apikey,question)
   }
   let timeoutIcon// 鼠标悬浮在div上，1秒后展示。
-  async function askChatGPTAndUpdateUI(gptkey,questio) {
+  async function askChatGPTAndUpdateUI(gptkey,question) {
     setSpin(true)
     setAnswer('')
-    const responseData = await getChatGPTAnswer(gptkey,questio)
-    console.log(responseData)
-    setAnswer(responseData.res)
+    const responseData = await getChatGPTAnswer(gptkey,question)
+    setAnswer(responseData?.res)
     setSpin(false)
   }
   return (
@@ -80,7 +85,7 @@ function App() {
             >
                 {/* <div>这里展示一个搜索框+一个确认搜索图标+配置中心</div> */}
                 <div style={{display:'flex', alignItems:'center', marginBottom:10}}>
-                  <div className='chatgpt-icon-chat-alyosha1024'></div>
+                  {/* <div className='chatgpt-icon-chat-alyosha1024'></div> */}
                   <div className='chatgpt-text-chat-alyosha1024'>ChatGPT</div>
                   <Link onClick={()=>{setSettingVisible(a=>!a)}}><IconSettings style={{color:'#222'}}/></Link>
                   {settingVisible&&
@@ -91,10 +96,10 @@ function App() {
                         }
                       >
                       <Input 
-                        addBefore='API key' 
+                        addBefore='API key:' 
                         style={{ width: 300 }} 
                         allowClear 
-                        placeholder='input your apikey'
+                        placeholder='input your ChatGPT api key here'
                         size='mini'
                         value={apikey}
                         onChange={(x)=>{setApikey(x)}}
@@ -102,7 +107,6 @@ function App() {
                       />
                       <Button size='mini' style={{ backgroundColor: '#f9c89b' }} onClick={saveApiKey} >save</Button>
                     </Popover>
-
                     </div>
                   }
                   <div id='saved-chat-alyosha1024' style={{ display:'none'}}>saved!</div>

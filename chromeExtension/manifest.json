@@ -1,0 +1,38 @@
+{
+  "name": "ChatGPTEverywhere",
+  "description": "Use ChatGPT wherever you want",
+  "icons": {
+    "128": "images/alyosha.png",
+    "16": "images/alyosha.png",
+    "48": "images/alyosha.png"
+  },
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "manifest_version": 3,
+  "version": "0.0.1",
+  "permissions": ["storage"  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./content.js"],
+      "type": "module",
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["chatgpttooltip-injected-by-alyosha1024.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "/images/alyosha.png",
+      "32": "/images/alyosha.png",
+      "48": "/images/alyosha.png",
+      "128": "/images/alyosha.png"
+    }
+  }
+}

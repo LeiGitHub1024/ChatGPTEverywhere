@@ -1,12 +1,12 @@
-export async function getChatGPTAnswer (gptkey,question){
+export async function getChatGPTAnswer(gptkey,question){
   try {
-    const response = await fetch(`http://localhost:3000/api?gptkey=${gptkey}&question=${question}`);
-    // console.log(response.headers,response)
+    const site = 'https://nextjs-jw7sgdy8x-leigithub1024.vercel.app/api/chatgpt_alyosha'
+    const response = await fetch(`${site}?gptkey=${gptkey}&question=${question}`);
     const data = await response.json();
     return data
     // console.log(data)
   } catch (error) {
-    console.error(error);
+    // console.error(error);
     // setData('err')
   }
 }
