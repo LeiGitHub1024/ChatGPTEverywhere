@@ -11,7 +11,7 @@ Chrome插件，选中一段文字，随时随地ChatGPT
 - [Youtube](https://www.youtube.com/watch?v=dpUtVjIdXWk)
 
 #### 源码
-  - 本项目前后端代码均**开源**，感兴趣的朋友可以自行食用: [前端](https://github.com/LeiGitHub1024/ChatGPTEverywhere)，[后端](https://github.com/LeiGitHub1024/ChatGPTEverywhereBackEnd)
+  - 本项目前后端代码均**开源**： [前端](https://github.com/LeiGitHub1024/ChatGPTEverywhere)，[后端](https://github.com/LeiGitHub1024/ChatGPTEverywhereBackEnd)
 
 ## 开发日志
 
