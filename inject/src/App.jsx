@@ -17,7 +17,7 @@ function App() {
     //加载用户保存的apiKey
     var scriptTag = document.querySelector('#injected_chatgpt_util_by_alyosha1024');
     var savedApiKey = scriptTag?.getAttribute('apikey');
-    if(savedApiKey){
+    if(savedApiKey&&savedApiKey!== 'undefined'){ //todo 这里其实可以换成apikey的校验函数。
       setApikey(savedApiKey)
     }else{
       setSettingVisible(true) 
