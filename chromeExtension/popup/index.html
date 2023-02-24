@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" crossorigin src="index.js"></script>
+   
+  </head>
+  <body>
+    <style>
+      .arc-switch {
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+          background-color: #d9d9d9;
+          border-radius: 17px;
+          position: relative;
+          cursor: pointer;
+        }
+        .arc-switch-slider {
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          width: 30px;
+          height: 30px;
+          background-color: #fff;
+          border-radius: 50%;
+          transition: all 0.3s ease;
+        }
+        .arc-switch.on{
+          background-color:rgb(22,93,255);
+        }
+        .arc-switch.on .arc-switch-slider {
+          transform: translateX(26px);
+        }
+    </style>
+    <div class="arc-switch">
+      <div class="arc-switch-slider"></div>
+    </div>
+  </body>
+</html>

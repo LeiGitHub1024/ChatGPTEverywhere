@@ -1,6 +1,23 @@
 
 
 const init = async ()=>{
+  //判断组件是否打开
+  let ChatGPTEverywhere_switchOff = false
+  await new Promise(r=>{
+    chrome.storage.local.get('ChatGPTEverywhere_switchOff',res=>{
+      ChatGPTEverywhere_switchOff = res?.ChatGPTEverywhere_switchOff;
+      r();
+    })
+  })
+  if(ChatGPTEverywhere_switchOff){ //如果组件关闭了，直接跳过
+    return
+  }
+  
+  // undefined  false  => dakai 
+  // true  => 跳过
+
+
+
   //获取用户保存的api key
   let apikey
   await new Promise(r=>{
@@ -47,4 +64,5 @@ const init = async ()=>{
 
 
 }
+
 init()

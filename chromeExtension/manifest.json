@@ -33,6 +33,7 @@
       "32": "/images/alyosha.png",
       "48": "/images/alyosha.png",
       "128": "/images/alyosha.png"
-    }
+    },
+    "default_popup": "popup/index.html"
   }
 }

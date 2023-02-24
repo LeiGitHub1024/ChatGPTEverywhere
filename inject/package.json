@@ -12,6 +12,7 @@
     "@arco-design/web-react": "^2.45.0",
     "@song940/chatgpt-api": "^0.0.2",
     "chatgpt": "^4.4.1",
+    "hljs": "^6.2.3",
     "less": "^4.1.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
