@@ -6,7 +6,7 @@ Chrome插件，选中一段文字，随时随地ChatGPT
 
 ## 使用说明
 #### chrome应用商店
-- 审核中......
+- [已上架](https://chrome.google.com/webstore/detail/chatgpteverywhere/mbffncligbhhdgecingogecdhfdknehb?hl=zh-CN)
 #### 使用教程
 - [Youtube](https://www.youtube.com/watch?v=dpUtVjIdXWk)
 
